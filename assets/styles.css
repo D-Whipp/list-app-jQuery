@@ -1,0 +1,91 @@
+* {
+    font-family: 'Lucida Sans Unicode';
+    text-transform: capitalize;
+}
+
+body {
+    align-items: center;
+    background: linear-gradient(245deg, #61677A 49%, #8062D6 50%);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: linear-gradient(65deg, #61677A 51%, #8062D6 49%);
+    border-radius: 5px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 1);
+    height: 700px;
+    width: 400px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+#input {
+    background: #555;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    height: 50px;
+    width: 95%;
+    margin: 15px 0px;
+    padding: 0px 10px;
+    outline: none;
+}
+
+#input::placeholder {
+    color: #bbb;
+}
+
+ul li {
+    align-items: center;
+    background: #555;
+    border-radius: 50px;
+    color: #fff;
+    display: flex;
+    font-size: 1.2rem;
+    height: 40px;
+    margin: 10px 0px;
+    padding: 10px;
+    position: relative;
+}
+
+ul .fa-check, .fa-trash {
+    cursor: pointer;
+    position: absolute;
+}
+
+ul .fa-check {
+    color: #008000;
+    right: 50px;
+}
+
+ul .fa-trash {
+    color: #ff0000;
+    right: 20px;
+}
+
+ul .checked {
+    background: lightgreen;
+    text-decoration: line-through;
+    transition: .2s;
+}
+
+/* ***** RESPONSIVE STYLING ***** */
+@media screen and (max-width: 400px) {
+    .container {
+        height: 100vh;
+        width: 100%;
+        background: linear-gradient(245deg, #61677A 49%, #8062D6 50%);
+    }
+
+    ul {
+        align-items: center;
+    }
+
+    ul li {
+        font-size: 1.2rem;
+        background: #D8D9DA;
+        color: black;
+    }
+}
