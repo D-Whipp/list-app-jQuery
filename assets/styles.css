@@ -19,6 +19,7 @@ body {
     width: 400px;
     padding: 10px;
     overflow-y: auto;
+    position: relative;
 }
 
 #input {
@@ -37,6 +38,17 @@ body {
     color: #bbb;
 }
 
+.clear-list-btn {
+    background: linear-gradient(145deg, #61677A 51%, #8062D6 49%);
+    border-radius: 0px 10px 10px 0px;
+    color: #fff;
+    font-size: 1.1rem;
+    height: 50px;
+    top: 25px;
+    right: 10px;
+    position: absolute;
+}
+
 ul li {
     align-items: center;
     background: #555;
@@ -50,20 +62,16 @@ ul li {
     position: relative;
 }
 
-ul .fa-check, .fa-trash {
+ul .fa-check {
     cursor: pointer;
     position: absolute;
 }
 
 ul .fa-check {
     color: #008000;
-    right: 50px;
+    right: 15px;
 }
 
-ul .fa-trash {
-    color: #ff0000;
-    right: 20px;
-}
 
 ul .checked {
     background: lightgreen;
