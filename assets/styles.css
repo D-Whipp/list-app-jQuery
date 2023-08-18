@@ -28,7 +28,7 @@ body {
     border-radius: 5px;
     color: #fff;
     height: 50px;
-    width: 95%;
+    width: 70%;
     margin: 15px 0px;
     padding: 0px 10px;
     outline: none;
@@ -36,6 +36,35 @@ body {
 
 #input::placeholder {
     color: #bbb;
+}
+
+.price-input {
+    background: #555;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    height: 50px;
+    width: 70%;
+    margin: 0px 0px 15px 0px;
+    padding: 0px 10px;
+    outline: none;
+}
+
+.total-cost {
+    align-items: center;
+    background:  linear-gradient(145deg, #61677A 51%, #8062D6 49%);
+    border: 3px solid #000;
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    font-weight: bold;
+    font-size: 1.3rem;
+    height: 50px;
+    justify-content: center;
+    position: absolute;
+    right: 10px;
+    top: 87px;
+    width: 90px;
 }
 
 .clear-list-btn {
