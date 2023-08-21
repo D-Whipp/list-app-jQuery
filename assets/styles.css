@@ -22,32 +22,20 @@ body {
     position: relative;
 }
 
-#input {
+.input {
     background: #555;
     border: none;
     border-radius: 5px;
     color: #fff;
     height: 50px;
     width: 70%;
-    margin: 15px 0px;
+    margin: 10px 0px 0px 0px;
     padding: 0px 10px;
     outline: none;
 }
 
-#input::placeholder {
+.input::placeholder {
     color: #bbb;
-}
-
-.price-input {
-    background: #555;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    height: 50px;
-    width: 70%;
-    margin: 0px 0px 15px 0px;
-    padding: 0px 10px;
-    outline: none;
 }
 
 .total-cost {
@@ -73,7 +61,7 @@ body {
     color: #fff;
     font-size: 1.1rem;
     height: 50px;
-    top: 25px;
+    top: 20px;
     right: 10px;
     position: absolute;
 }

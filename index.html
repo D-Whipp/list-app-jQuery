@@ -6,6 +6,11 @@
             name="viewport"
             content="width=device-width, initial-scale=1.0"
         />
+        <script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/14f10ad80a.js" crossorigin="anonymous"></script>
         <title>Todo App</title>
         <link rel="stylesheet"
         href="./assets/reset.css" />
@@ -14,28 +19,41 @@
     </head>
     <body>
         <div class="container">
-            <input
-                type="text"
-                id="input"
-                placeholder="press enter to add product"
-            />
-            <button class="clear-list-btn">clear list</button>
             <!-- <input
                 type="text"
-                class="price-input"
+                id="item-name"
+                class="input"
+                placeholder="press enter to add product"
+            />
+            <input
+                type="text"
+                id="item-price"
+                class="input"
                 placeholder="press enter to add price"
-            /> -->
-            <!-- <p class="total-cost"></p> -->
+            />
+            <button class="clear-list-btn">clear list</button> -->
+
+            <form id="content-form">
+                <input
+                    type="text"
+                    id="form-item-name"
+                    class="input"
+                    placeholder="product name"
+                >
+                <input
+                    type="text"
+                    id="form-item-price"
+                    class="input"
+                    placeholder="product price"
+                >
+                <input class="clear-list-btn" type="submit">
+            </form>
 
             <ul id="item-list">
 
             </ul>
         </div>
 
-        <script
-  src="https://code.jquery.com/jquery-3.7.0.min.js"
-  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
-  crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/14f10ad80a.js" crossorigin="anonymous"></script>
+    
     </body>
 </html>
