@@ -28,7 +28,9 @@ $(document).ready(function () {
     );
 
     if (localStorage) {
-        const retrievedList = JSON.parse(localStorage.getItem('list') || '[]');
+        const retrievedList = JSON.parse(
+            localStorage.getItem('list') || '[]'
+        );
         items = retrievedList;
         console.log(items);
     }
@@ -46,4 +48,8 @@ $(document).ready(function () {
             );
         }
     }
+
+    $('ul').on('click', '.fa-check', function () {
+        $(this).parent('li').toggleClass('checked');
+    });
 });
