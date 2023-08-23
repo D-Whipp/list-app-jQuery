@@ -20,22 +20,28 @@ $(document).ready(function () {
         items.push(fields);
 
         localStorage.setItem('list', JSON.stringify(items));
+        location.reload(true);
     });
 
     let displayItems = JSON.parse(
         localStorage.getItem('list') || '{}'
     );
-    console.log('Display items: ', displayItems);
 
-    for (let i = 0; i < displayItems.length; i++) {
-        if (displayItems.length === 0) {
+    if (localStorage) {
+        const retrievedList = JSON.parse(localStorage.getItem('list') || '[]');
+        items = retrievedList;
+        console.log(items);
+    }
+
+    for (let i = 0; i < items.length; i++) {
+        if (items.length === 0) {
             return;
         } else {
             $('ul').append(
                 '<li>' +
-                    displayItems[i].name +
+                    items[i].name +
                     ' $' +
-                    displayItems[i].price +
+                    items[i].price +
                     ' <i class="fas fa-check"></li>'
             );
         }

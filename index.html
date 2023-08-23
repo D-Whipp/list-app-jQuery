@@ -19,32 +19,23 @@
     </head>
     <body>
         <div class="container">
-            <!-- <input
-                type="text"
-                id="item-name"
-                class="input"
-                placeholder="press enter to add product"
-            />
-            <input
-                type="text"
-                id="item-price"
-                class="input"
-                placeholder="press enter to add price"
-            />
-        -->
-        
+    
             <form id="content-form">
                 <input
                     type="text"
                     id="form-item-name"
                     class="input"
                     placeholder="product name"
+                    required
                     >
                     <input
                     type="number"
+                    step="0.01"
+                    min="0"
                     id="form-item-price"
                     class="input"
                     placeholder="product price"
+                    required
                     >
                     <input class="submit-btn" type="submit">
                 </form>
