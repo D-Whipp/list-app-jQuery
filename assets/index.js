@@ -63,15 +63,9 @@ $(document).ready(function () {
         location.reload(true);
     });
 
-    console.log(items);
-
     let pricesArray = [];
     for (let k = 0; k < items.length; k++) {
         pricesArray.push(items[k].price);
-    }
-    console.log('prices array: ', pricesArray);
-    for (k=0; k < pricesArray.length; k++) {
-        console.log(pricesArray[k])
     }
 
     let total = pricesArray.reduce(function (a, b) {
@@ -80,6 +74,4 @@ $(document).ready(function () {
 
     let totalCost = $('.total-cost');
     totalCost.text(total);
-
-    console.log('total: ', total);
 });
