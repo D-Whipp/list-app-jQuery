@@ -34,7 +34,6 @@ $(document).ready(function () {
         console.log(items);
     }
 
-    console.log('items: ', items);
 
     for (let i = 0; i < items.length; i++) {
         if (items.length === 0) {
@@ -45,7 +44,9 @@ $(document).ready(function () {
                     items[i].name +
                     ' $' +
                     items[i].price +
-                    ' <i class="fas fa-check"></i> <i class="fas fa-trash"></i> </li>' + '<p class="hideId">' + items[i].id + '</p>'
+                    ' - ' + 
+                    items[i].id +
+                    ' <i class="fas fa-check"></i> <i class="fas fa-trash"></i> </li>'
             );
         }
     }
@@ -56,20 +57,18 @@ $(document).ready(function () {
 
     $('ul').on('click', '.fa-trash', function () {
         $(this).parent('li').toggleClass('trashed');
-        console.log('trashed array: ', items);
-        let lookingAt = $(this).parent().html();
+        let id = parseInt($(this).parent().text().slice(-16));
 
-        items.forEach(function (item) {
-            let itemName = item.name;
-            let itemPrice = item.price;
-            let amalgamation = itemName + ' $' + itemPrice;
-            console.log('id', amalgamation);
+        console.log('Looking at: ', id);
 
-            if (lookingAt == amalgamation) {
-                console.log('matched!');
+        for (let i = 0; i < items.length; i++) {
+            if (items[i].id == id) {
+                console.log('Found: ', items[i].name);
+                items.splice(i, 1);
+                console.log(items);
+                localStorage.setItem('list', JSON.stringify(items));
+                location.reload(true);
             }
-        });
-        // let lookingAt = $(this).parent().remove();
-        console.log('Looking at: ', lookingAt);
+        }
     });
 });

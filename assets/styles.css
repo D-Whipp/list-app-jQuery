@@ -134,6 +134,10 @@ ul .hideId {
     opacity: 0;
 }
 
+.hideMe {
+    display: hidden;
+}
+
 /* ***** RESPONSIVE STYLING ***** */
 @media screen and (max-width: 400px) {
     .container {
