@@ -10,7 +10,7 @@ $(document).ready(function () {
         e.preventDefault();
 
         let itemName = $('#form-item-name').val();
-        let itemPrice = $('#form-item-price').val();
+        let itemPrice = parseFloat($('#form-item-price').val());
         let fields = {
             name: itemName,
             price: itemPrice,
@@ -38,7 +38,7 @@ $(document).ready(function () {
                     items[i].name +
                     ' $' +
                     items[i].price +
-                    ' - ' +
+                    ' ID: ' +
                     items[i].id +
                     ' <i class="fas fa-check"></i> <i class="fas fa-trash"></i> </li>'
             );
@@ -67,12 +67,16 @@ $(document).ready(function () {
 
     let pricesArray = [];
     for (let k = 0; k < items.length; k++) {
-        pricesArray.push(parseInt(items[k].price));
+        pricesArray.push(items[k].price);
     }
     console.log('prices array: ', pricesArray);
+    for (k=0; k < pricesArray.length; k++) {
+        console.log(pricesArray[k])
+    }
+
     let total = pricesArray.reduce(function (a, b) {
         return a + b;
-    });
+    }).toFixed(2);
 
     let totalCost = $('.total-cost');
     totalCost.text(total);
