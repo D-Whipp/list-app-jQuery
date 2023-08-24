@@ -22,18 +22,12 @@ $(document).ready(function () {
         location.reload(true);
     });
 
-    let displayItems = JSON.parse(
-        localStorage.getItem('list') || '{}'
-    );
-
     if (localStorage) {
         const retrievedList = JSON.parse(
             localStorage.getItem('list') || '[]'
         );
         items = retrievedList;
-        console.log(items);
     }
-
 
     for (let i = 0; i < items.length; i++) {
         if (items.length === 0) {
@@ -44,7 +38,7 @@ $(document).ready(function () {
                     items[i].name +
                     ' $' +
                     items[i].price +
-                    ' - ' + 
+                    ' - ' +
                     items[i].id +
                     ' <i class="fas fa-check"></i> <i class="fas fa-trash"></i> </li>'
             );
@@ -58,17 +52,30 @@ $(document).ready(function () {
     $('ul').on('click', '.fa-trash', function () {
         $(this).parent('li').toggleClass('trashed');
         let id = parseInt($(this).parent().text().slice(-16));
-
-        console.log('Looking at: ', id);
+        $(this).parent('li').fadeOut(300);
 
         for (let i = 0; i < items.length; i++) {
             if (items[i].id == id) {
-                console.log('Found: ', items[i].name);
                 items.splice(i, 1);
-                console.log(items);
                 localStorage.setItem('list', JSON.stringify(items));
-                location.reload(true);
             }
         }
+        location.reload(true);
     });
+
+    console.log(items);
+
+    let pricesArray = [];
+    for (let k = 0; k < items.length; k++) {
+        pricesArray.push(parseInt(items[k].price));
+    }
+    console.log('prices array: ', pricesArray);
+    let total = pricesArray.reduce(function (a, b) {
+        return a + b;
+    });
+
+    let totalCost = $('.total-cost');
+    totalCost.text(total);
+
+    console.log('total: ', total);
 });
