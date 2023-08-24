@@ -11,7 +11,6 @@ $(document).ready(function () {
 
         let itemName = $('#form-item-name').val();
         let itemPrice = $('#form-item-price').val();
-        console.log('Form items: ' + itemName + ' ' + itemPrice);
         let fields = {
             name: itemName,
             price: itemPrice,
@@ -35,6 +34,8 @@ $(document).ready(function () {
         console.log(items);
     }
 
+    console.log('items: ', items);
+
     for (let i = 0; i < items.length; i++) {
         if (items.length === 0) {
             return;
@@ -44,12 +45,31 @@ $(document).ready(function () {
                     items[i].name +
                     ' $' +
                     items[i].price +
-                    ' <i class="fas fa-check"></li>'
+                    ' <i class="fas fa-check"></i> <i class="fas fa-trash"></i> </li>' + '<p class="hideId">' + items[i].id + '</p>'
             );
         }
     }
 
     $('ul').on('click', '.fa-check', function () {
         $(this).parent('li').toggleClass('checked');
+    });
+
+    $('ul').on('click', '.fa-trash', function () {
+        $(this).parent('li').toggleClass('trashed');
+        console.log('trashed array: ', items);
+        let lookingAt = $(this).parent().html();
+
+        items.forEach(function (item) {
+            let itemName = item.name;
+            let itemPrice = item.price;
+            let amalgamation = itemName + ' $' + itemPrice;
+            console.log('id', amalgamation);
+
+            if (lookingAt == amalgamation) {
+                console.log('matched!');
+            }
+        });
+        // let lookingAt = $(this).parent().remove();
+        console.log('Looking at: ', lookingAt);
     });
 });

@@ -106,6 +106,12 @@ ul .fa-check {
     /* height: 80%; */
 }
 
+ul .fa-trash {
+    color: #ff0000;
+    right: 50px;
+    position: absolute;
+}
+
 ul .fa-check {
     color: #008000;
     right: 15px;
@@ -116,6 +122,16 @@ ul .checked {
     background: lightgreen;
     text-decoration: line-through;
     transition: .2s;
+}
+
+ul .trashed {
+    background: red;
+    text-decoration: line-through;
+    transition: .2s;
+}
+
+ul .hideId {
+    opacity: 0;
 }
 
 /* ***** RESPONSIVE STYLING ***** */
