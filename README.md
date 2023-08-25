@@ -6,7 +6,7 @@
 
 ## Description
 
-A todo app build with HTML, CSS, and jQuery.
+A shopping list app build with HTML, CSS, and jQuery.
 
 ## Table of Contents
 
