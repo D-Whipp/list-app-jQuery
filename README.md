@@ -1,8 +1,8 @@
 # todo-app-jQuery
 
-# Front-End jQuery Application
+## Front-End jQuery Application
 
-![app-screenshot](./assets/images/Todo-App-Screenshot.png)
+![app-screenshot](./assets/images/Todo-App-Screenshot2.png)
 
 ## Description
 
@@ -11,7 +11,7 @@ A todo app build with HTML, CSS, and jQuery.
 ## Table of Contents
 
 -   [todo-app-jQuery](#todo-app-jquery)
--   [Front-End jQuery Application](#front-end-jquery-application)
+    -   [Front-End jQuery Application](#front-end-jquery-application)
     -   [Description](#description)
     -   [Table of Contents](#table-of-contents)
     -   [Purpose](#purpose)
@@ -78,3 +78,4 @@ Let's make a connection! [LinkedIn](https://www.linkedin.com/in/david-w-07984121
 ![css3](https://img.shields.io/badge/css3-CascadingStyleSheets-darkblue)
 ![javascript](https://img.shields.io/badge/language-javascript-darkblue)
 ![jquery](https://img.shields.io/badge/library-jQuery-darkblue)
+![localStorage](https://img.shields.io/badge/storedData-localStorage-darkblue)
