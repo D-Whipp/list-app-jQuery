@@ -27,7 +27,7 @@ Brushing up on my jQuery.
 
 ## Usage
 
-This [Shopping List](https://d-whipp.github.io/todo-app-jQuery/) application is simple to use. Click the link and you'll be taken to the deployed app (using Github Pages). There you can add items to a list, checkmark them, delete a single item, and clear the list. These items are saved to localStorage.
+This [Shopping List]([https://d-whipp.github.io/todo-app-jQuery/](https://d-whipp.github.io/list-app-jQuery/) application is simple to use. Click the link and you'll be taken to the deployed app (using Github Pages). There you can add items to a list, checkmark them, delete a single item, and clear the list. These items are saved to localStorage.
 
 ## Technologies
 
