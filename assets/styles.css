@@ -23,30 +23,46 @@ body {
 
 .name-input {
     background: #555;
-    border: none;
+    border: 3px solid #5f3568;
     border-radius: 5px;
     color: #fff;
     height: 50px;
     width: 92%;
     position: absolute;
     bottom: 60px;
-    right: 10px;
+    right: 5px;
     padding: 0px 10px;
     outline: none;
 }
 
+.name-input:focus {
+    border: 5px dotted #cc5592;
+    background: #5f3568;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+}
+
 .price-input {
     background: #555;
-    border: none;
+    border: 3px solid #5f3568;
     border-radius: 0px 5px 5px 0px;
     color: #fff;
     height: 50px;
     width: 68%;
     position: absolute;
-    bottom: 5px;
+    bottom: 3px;
     right: 10px;
     padding: 0px 10px;
     outline: none;
+}
+
+.price-input:focus {
+    border: 5px dotted #cc5592;
+    background: #5f3568;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
 }
 
 .input::placeholder {
@@ -54,7 +70,7 @@ body {
 }
 
 .submit-btn {
-    background: linear-gradient(145deg, #61677A 51%, #8062D6 49%);
+    background: linear-gradient(0deg, #cc5592 5%, #5f3568 49%);
     border-radius: 10px 0px 0px 10px;
     color: #fff;
     font-size: 100%;
@@ -66,26 +82,32 @@ body {
 }
 
 .clear-list-btn {
-    background: linear-gradient(145deg, #61677A 51%, #8062D6 49%);
+    background: linear-gradient(0deg, #cc5592 5%, #5f3568 49%);
     border-radius: 15px;
     color: #fff;
     font-size: 150%;
     height: 50px;
     width: 40%;
     top: 10px;
-    left: 5px;
+    left: 10px;
     position: absolute;
 }
 
 .total-cost-container {
-    background-color: #202020;
+    background-color: #222;
+    border: 2px solid #fff;
     border-radius: 15px;
     color: #fff;
-    font-size: 100%;
-    padding: 18px 50px;
+    font-size: 120%;
+    padding: 15px 30px;
     position: absolute;
     top: 10px;
     right: 10px;
+}
+
+.item-id {
+    font-size: 0.8rem;
+    margin-left: 5px;
 }
 
 ul {
@@ -142,10 +164,6 @@ ul .trashed {
 
 ul .hideId {
     opacity: 0;
-}
-
-.hideMe {
-    display: hidden;
 }
 
 /* ***** RESPONSIVE STYLING ***** */

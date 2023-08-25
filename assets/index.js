@@ -38,9 +38,9 @@ $(document).ready(function () {
                     items[i].name +
                     ' $' +
                     items[i].price +
-                    ' ID: ' +
+                    '<span class="item-id"> ID: ' +
                     items[i].id +
-                    ' <i class="fas fa-check"></i> <i class="fas fa-trash"></i> </li>'
+                    '</span> <i class="fas fa-check"></i> <i class="fas fa-trash"></i> </li>'
             );
         }
     }
