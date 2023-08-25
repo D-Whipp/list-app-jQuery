@@ -1,4 +1,4 @@
-# todo-app-jQuery
+# jQuery Shopping List
 
 ## Front-End jQuery Application
 
