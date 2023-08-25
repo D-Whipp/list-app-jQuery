@@ -174,6 +174,30 @@ ul .hideId {
         background: linear-gradient( #5f3568 25%, #cc5592 50%);
     }
 
+    .clear-list-btn {
+        left: 10px;
+        width: 35%;
+    }
+
+    .total-cost-container {
+        padding: 14px 30px;
+    }
+
+    .name-input {
+        right: 3px;
+    }
+
+    .submit-btn {
+        left: 3px;
+    }
+
+    .price-input {
+        right: 5px;
+        bottom: 4px;
+        height: 45px;
+        width: 67%;
+    }
+
     ul {
         align-items: center;
     }
